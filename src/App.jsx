@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Navbar from "./pages/navbar";
+import Navbar from "./pages/Navbar";
 import Footer from "./pages/Footer"
 import Listings from "./pages/listings";
 import ListingDetails from "./pages/ListingDetails";
