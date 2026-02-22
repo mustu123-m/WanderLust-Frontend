@@ -7,7 +7,7 @@ import ListingDetails from "./pages/ListingDetails";
 import NewListingForm from "./pages/NewListing"
 import ListingEditForm from "./pages/ListingEdit"
 import Login from "./pages/Login";
-import Signup from "./pages/signup";
+import Signup from "./pages/Signup";
 import { getCurrentUser } from "./services/auth";
 import "./App.css";
 import { Navigate } from "react-router-dom";
