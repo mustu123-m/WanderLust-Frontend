@@ -6,19 +6,26 @@ function Listings() {
   const [loading, setLoading] = useState(true);
   const [searchParams, setSearchParams] = useSearchParams();
    const search = searchParams.get("search"); 
+   const category= searchParams.get("category");
     const BASE_URL=import.meta.env.VITE_BASE_URL;
     console.log(BASE_URL);
   useEffect( () => {
     if(search){
       fetch(`${BASE_URL}/listing?search=${search}`).then(res => res.json()).then(data => {
-        setListings(data.listings);
+          if(category){
+          setListings(data.listings.filter(listing=>listing.category==category));
+        }
+       else setListings(data.listings);
         setLoading(false);
       })
       .catch(() => setLoading(false));
     }
     else{
       fetch(`${BASE_URL}/listing`).then(res => res.json()).then(data => {
-        setListings(data.listings);
+          if(category){
+          setListings(data.listings.filter(listing=>listing.category==category));
+        }
+        else setListings(data.listings);
         setLoading(false);
       })
       .catch(() => setLoading(false));
