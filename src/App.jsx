@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Navbar from "./pages/Navbar";
 import Footer from "./pages/Footer"
-import Listings from "./pages/listings";
+import Listings from "./pages/Listings";
 import ListingDetails from "./pages/ListingDetails";
 import NewListingForm from "./pages/NewListing"
 import ListingEditForm from "./pages/ListingEdit"
