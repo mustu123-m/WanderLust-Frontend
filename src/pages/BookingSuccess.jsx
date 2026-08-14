@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-const API = "http://localhost:8080/api";
+const API = import.meta.env.VITE_BASE_URL;
 
 function BookingSuccess({setFlash}) {
   const { bookingId } = useParams();
